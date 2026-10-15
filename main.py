@@ -44,7 +44,7 @@ async def chat(request: Request):
     """
 
     response = client.chat.completions.create(
-        model="model="llama-3.3-70b-versatile",",
+        model="llama-3.3-70b-versatile",
         messages=[{"role": "user", "content": prompt}]
     )
     return {"reply": response.choices[0].message.content}
